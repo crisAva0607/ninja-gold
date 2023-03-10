@@ -50,6 +50,7 @@ function next(){
         $("#lossGainsTable").modal('show');
     });
 
+
     
     
 }
@@ -250,6 +251,7 @@ function populateTableLoss() {
             $("#allTable").modal('show');
         });
         $("#logTitle").html("You Win!");
+        $("#goldEarned").html(gameInstance.totalGold);
         
         
     }
@@ -259,6 +261,7 @@ function populateTableLoss() {
             $("#allTable").modal('show');
         });
         $("#logTitle").html("You Lose!");
+        $("#goldEarned").html(gameInstance.totalGold);
         
         
     } else if (gameInstance.attempts == 20 && gameInstance.totalGold >= 250) {
@@ -267,6 +270,7 @@ function populateTableLoss() {
             $("#allTable").modal('show');
         });
         $("#logTitle").html("You Win!");
+        $("#goldEarned").html(gameInstance.totalGold);
         
         
     }}
