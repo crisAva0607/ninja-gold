@@ -6,38 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="gameContainer">
-            <button type = "button" id="ninja">NINJA</button>
-            <button type = "button" id="cave">CAVE</button>
-            <button type = "button" id="house">HOUSE</button>
-            <button type = "button" id="goldmine">GOLDMINE</button>
-            <button type = "button" id="casino">CASINO</button>
+        <div class="row">
+          <div class="col-lg-9">
+
+        <div class="random-buttons">
+          
+          <button type="button" class="btn btn-secondary" id="cave">CAVE</button>
+          <button type="button" class="btn btn-success" id="house">HOUSE</button>
+          <button type="button" class="btn btn-danger" id="goldmine">GOLDMINE</button>
+          <button type="button" class="btn btn-danger" id="casino">CASINO</button>
+
+        </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="logContainer">
+                <div><p>Attempt: <span id="attempts">0</span></p></div>
+                <div><p>Gold Earned: <span id="gold">0</span></p></div>
+                <div><p id="log"></p></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+  
+<!-- Modal ALL Table -->
+<div class="modal fade" id="allTable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header float-right">
+          <h5>GAME LOG</h5>
+          <h5 id="logTitle"></h5>
+          <div class="text-right">
+            <i data-dismiss="modal" aria-label="Close" class="fa fa-close"></i>
+          </div>
+        </div>
+        <div class="modal-body">
             
+  
+  
+          <div>
+            
+            <table class="table table-bordered" id="myTable1">
+                <thead>
+                    <tr>
+                        <th>TIME</th>
+                        <th>EVENTS</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+  
+          </div>
+  
+  
         </div>
-
-        <div class="logContainer">
-            <div><p>Attempts Left:<span id="attempts">20</span></p></div>
-            <div><p>Gold Earned:<span id="gold">0</span></p></div>
-            <div><span id="log"></span></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="next">NEXT</button>
         </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Modal LOSSES & GAINS TABLE-->
+<div class="modal fade" id="lossGainsTable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header float-right">
+          <h5>GAME LOG</h5>
+          <h5 id="logTitle"></h5>
+          <div class="text-right">
+            <i data-dismiss="modal" aria-label="Close" class="fa fa-close"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+            
+  
+  
+          <div>
+            
+            <table class="table table-bordered" id="myTable2">
+                <thead>
+                    <tr>
+                        <th>GAINS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                
+            </table>
+            <div><p>Total Gains: <span id="totalGains"></span></p></div>
+            <table class="table table-bordered" id="myTable3">
+                <thead>
+                    <tr>
+                        <th>LOSSES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div><p>Total Losses: <span id="totalLosses"></span></p></div>
+  
+          </div>
+  
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
+    
+      </div>
 
     
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="./js/script.js"></script>
 </body>
 </html>

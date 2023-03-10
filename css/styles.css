@@ -1,0 +1,11 @@
+.random-buttons {
+      position: absolute;
+      top: 20%;
+      left: 25%;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
